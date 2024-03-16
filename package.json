@@ -1,0 +1,62 @@
+{
+  "name": "escape-room",
+  "version": "1.0.0",
+  "description": "controlar el escape room",
+  "main": "main.js",
+  "scripts": {
+    "dev": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "agregar_a_path.bat"
+  },
+  "author": "Henry Acaro",
+  "license": "ISC",
+  "build": {
+    "appId": "com.escape-room.app",
+    "productName": "Escape room controller",
+    "extraResources": [
+      {
+          "from": "../escape-room/temp",
+          "to": "temp"
+      }
+  ],
+  "files": [
+    "**/*"
+  ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "artifactName": "Escaperoom-Windows-Setup.exe"
+    }
+  },
+  "devDependencies": {
+    "electron": "^29.1.0",
+    "electron-builder": "^24.13.3",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "serialport": "^12.0.0",
+    "standard": "^17.1.0",
+    "tableify": "^1.1.1"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  },
+  "dependencies": {
+    "blockly": "^10.4.2",
+    "browser-serialport": "^2.1.0",
+    "child_process": "^1.0.2",
+    "node-gyp": "^10.0.1",
+    "python": "^0.0.4",
+    "python-shell": "^5.0.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "serialport": "^12.0.0",
+    "standard": "^17.1.0",
+    "tableify": "^1.1.1"
+  }
+}
