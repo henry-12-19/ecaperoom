@@ -1,0 +1,91 @@
+<div id="site-content">
+	
+			<header class="site-header">
+				<div class="top-header">
+					<div class="container">
+		
+					</div> <!-- .contenedor del titulo y el logo -->
+				</div> <!-- termina el encabezado que contiene el fondo -->
+
+			</header> <!-- header -->
+
+			<main class="main-content">
+				<div class="breadcrumbs">
+					<div class="container">
+						<a href="index.html">Inicio</a>
+						<span>Area de recursos educativos</span>
+					</div>
+				</div>
+
+				<div class="page">
+					<div class="container">
+<div class="row">
+  <div class="col-md-4 mx-auto">
+    <div class="card bg-black text-white">
+      <div class="card-header pt-5">
+        <h4 class="text-center">
+          Crear cuenta
+        </h4>
+      </div>
+      <div class="card-body">
+        <form action="/auth/signup" method="POST">
+          <div class="mb-3">
+            <label for="name">Nombre:</label>
+            <input
+              type="text"
+              class="form-control bg-dark text-white"
+              name="name"
+              placeholder="Nombre"
+              value="{{name}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control bg-dark text-white"
+              name="email"
+              placeholder="Email"
+              value="{{email}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password">tipo</label>
+            <input
+              type="text"
+              class="form-control bg-dark text-white"
+              name="tipo"
+              placeholder="tipo"
+              value="{{tipo}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password">Contraseña</label>
+            <input
+              type="password"
+              class="form-control bg-dark text-white"
+              name="password"
+              placeholder="Contraseña"
+              value="{{password}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="confirm_password">Cofirmar contraseña:</label>
+            <input
+              type="password"
+              class="form-control bg-dark text-white"
+              name="confirm_password"
+              placeholder="Confirmar contraseña"
+              value="{{confirm_password}}"
+            />
+          </div>
+          <button class="btn btn-success btn-block">
+            registrar
+          </button>
+        </form>
+      </div>
+      <p class="text-center">ya tienes una cuenta?
+        <a href="/" class="text-info">iniciar sesión</a></p>
+    </div>
+  </div>
+</div>

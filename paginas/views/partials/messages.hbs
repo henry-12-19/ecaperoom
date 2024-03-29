@@ -1,0 +1,19 @@
+{{#if success_msg}}
+  <div class="alert success-alert" style="
+    width: 500px;">
+  <h5>{{success_msg}}</h5>
+  <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    >&times;</button>
+</div>
+{{/if}}
+
+{{#if error_msg}}
+<div class="alert danger-alert">
+  <h3>{{error_msg}}</h3>
+  <a class="close">&times;</a>
+</div>
+{{/if}}
