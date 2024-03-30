@@ -12,6 +12,7 @@ import { Server } from 'socket.io';
 import streamSerialPorts from "./paginas/controllers/seriales.js"
 import http from "http";
 import { exec } from "child_process";
+const PORT = process.env.PORT || 3000;
 const sketchPath = './Plantilla/plantilla/plantilla.ino';
 const command = `arduino-cli compile --fqbn arduino:avr:uno ${sketchPath}`;
 const uploadCommand = `arduino-cli upload -p COM4 --fqbn arduino:avr:uno ${sketchPath}`;
@@ -66,8 +67,8 @@ app.get('/puertos', (req, res) => {
     res.send({ ports });
   })
   .catch(err => {
-    console.error("Error obteniendo la lista de puertos seriales:", err);
-    res.status(500).send("Error obteniendo la lista de puertos seriales");
+    console.error("Error obteniendo la lista de puertos seriales:222", err);
+    res.status(500).send("Error obteniendo la lista de puertos seriales2");
   });
  });
 
@@ -109,7 +110,7 @@ app.get('/compile', (req, res) => {
 
 
 
-// bootstraping the app
-server.listen(3000);
+// fo1_oAukrKPwxIj-CPGwRsaCsmYf0QAyeR7hC7Wif3qupNM
+server.listen(PORT);
 
 console.log("Express app started on port 3000");
